@@ -8,3 +8,17 @@ string[] SelectStringsLessThen3(string[] array)
         if (array[i].Length <= 3) count++;
         i++;
     }
+    string[] selectedarr = new string[count];
+    int k = 0;
+    int n = 0;
+    while (k < array.Length)
+    {
+        if (array[k].Length <= 3)
+        {
+            selectedarr[n] = array[k];
+            n++;
+        }
+        k++;
+    }
+    return selectedarr;
+}
